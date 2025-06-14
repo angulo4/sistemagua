@@ -1,0 +1,12 @@
+.dropdown-child a {
+  display: inline-block;
+  margin-right: 10px;
+  text-decoration: none;
+  color: black;
+}
+
+.mainmenubtn {
+  font-weight: bold;
+  padding: 10px 15px;
+  cursor: pointer;
+}
