@@ -1,3 +1,49 @@
+/* Centrado del logo */
+.logo-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.logo {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Menú centrado y responsive */
+.menu-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 20px auto;
+  padding: 0 10px;
+}
+
+.menu-container a {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 15px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-family: sans-serif;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  text-align: center;
+  min-width: 140px;
+}
+
+.menu-container a:hover {
+  background-color: #0056b3;
+}
+
+/* Para asegurar que en móviles no se sale del ancho */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
 /* Estilo para los enlaces tipo botón */
 .dropdown-child a {
   display: inline-block;
