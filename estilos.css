@@ -30,39 +30,14 @@
   transition: background-color 0.3s;
   text-align: center;
   min-width: 140px;
+  display: inline-block;
 }
 
 .menu-container a:hover {
   background-color: #0056b3;
 }
 
-/* Para asegurar que en móviles no se sale del ancho */
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-
-/* Estilo para los enlaces tipo botón */
-.dropdown-child a {
-  display: inline-block;
-  margin-right: 10px;
-  padding: 8px 15px;
-  background-color: #007BFF; /* azul botón */
-  color: white;
-  text-decoration: none;
-  border-radius: 5px;
-  font-family: sans-serif;
-  font-size: 14px;
-  transition: background-color 0.3s ease;
-}
-
-.dropdown-child a:hover {
-  background-color: #0056b3; /* efecto al pasar el ratón */
-}
-
-/* Opcional: estilo del botón principal */
+/* Estilo del botón principal (si se sigue usando) */
 .mainmenubtn {
   font-weight: bold;
   padding: 10px 20px;
@@ -73,9 +48,16 @@ body {
   border-radius: 5px;
 }
 
-/* Por si aún usas listas en otra parte, puedes quitar los puntos así */
+/* Reset de listas para evitar puntos */
 ul, ol {
   list-style: none;
   padding: 0;
   margin: 0;
+}
+
+/* Móvil: asegurar ancho correcto y márgenes */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
