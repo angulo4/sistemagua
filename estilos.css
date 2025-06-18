@@ -68,3 +68,22 @@ body {
   box-sizing: border-box;
 }
 
+.tabla-con-borde {
+  border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 20px;
+}
+/* TABLAS MEJORADAS x*/
+
+.tabla-con-borde th,
+.tabla-con-borde td {
+  border: 1px solid #444;
+  padding: 8px;
+  text-align: left;
+}
+
+.tabla-con-borde th {
+  background-color: #f0f0f0;
+  font-weight: bold;
+}
+
