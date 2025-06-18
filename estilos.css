@@ -61,3 +61,10 @@ body {
   padding: 0;
   box-sizing: border-box;
 }
+/*BORDES SEPARADO 10px*/
+body {
+  margin: 0;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
