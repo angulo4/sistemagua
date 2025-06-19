@@ -37,7 +37,7 @@
   background-color: #0056b3;
 }
 
-/* Estilo del botón principal (si se sigue usando) */
+/* Estilo del botón principal */
 .mainmenubtn {
   font-weight: bold;
   padding: 10px 20px;
@@ -48,32 +48,26 @@
   border-radius: 5px;
 }
 
-/* Reset de listas para evitar puntos */
+/* Reset de listas */
 ul, ol {
   list-style: none;
   padding: 0;
   margin: 0;
 }
 
-/* Móvil: asegurar ancho correcto y márgenes */
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-/*BORDES SEPARADO 10px*/
+/* Estilo general del body */
 body {
   margin: 0;
   padding: 10px;
   box-sizing: border-box;
 }
 
+/* Tablas */
 .tabla-con-borde {
   border-collapse: collapse;
   width: 100%;
   margin-bottom: 20px;
 }
-/* TABLAS MEJORADAS x*/
 
 .tabla-con-borde th,
 .tabla-con-borde td {
@@ -86,4 +80,3 @@ body {
   background-color: #f0f0f0;
   font-weight: bold;
 }
-
