@@ -65,7 +65,7 @@ body {
 /* Tablas */
 .tabla-con-borde {
   border-collapse: collapse;
-  width: 100%;
+  width: 80%;
   max-width: 500px;
   margin: 20px auto;
   border: 1px solid #ccc;
