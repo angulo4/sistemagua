@@ -65,23 +65,25 @@ body {
 /* Tablas */
 .tabla-con-borde {
   border-collapse: collapse;
-  width: 80%; /* antes era 100% */
-  margin: 20px auto; /* centrado horizontal */
-  max-width: 600px; /* evita que sea demasiado ancha */
+  width: 100%;
+  max-width: 500px;
+  margin: 20px auto;
+  border: 1px solid #ccc;
   font-family: sans-serif;
   font-size: 14px;
 }
 
 .tabla-con-borde th,
 .tabla-con-borde td {
-  border: 1px solid #444;
-  padding: 6px 10px; /* menos padding para que el contenido esté más cerca del borde */
+  border: 1px solid #ccc;
+  padding: 6px 10px;
   text-align: left;
-  vertical-align: bottom; /* reemplaza `valign="bottom"` del HTML */
+  vertical-align: bottom;
 }
 
 .tabla-con-borde th {
   background-color: #f0f0f0;
   font-weight: bold;
 }
+
 
