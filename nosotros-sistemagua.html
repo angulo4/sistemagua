@@ -16,16 +16,19 @@
       <img src="images/sistemagua-610x220.jpg" alt="Logo SistemAgua" class="logo">
     </a>
 </div> 
-<!-- Menú centrado -->
-  <nav class="menu-container">
-    <a href="#">TIENDA</a>
-    <a href="nosotros-sistemagua.html">NOSOTROS SISTEMAGUA</a>
-    <a href="dureza-agua-espana.html">DUREZA DEL AGUA EN ESPAÑA</a>
-    <a href="filtro-anticloro-para-grifo-ducho.html">FILTRO ANTICLORO</a>
-    <a href="filtro-agua-grifo-mexico.html">FILTRO AGUA MEXICO</a>
-    <a href="calidad-agua-mexico.html">CALIDAD AGUA MEXICO</a>
-  </nav>     
-<!-- FIN Menú centrado --> 
+<!-- Menú JavaScrpt fetch -->
+<div id="menu"></div>
+<!-- fetch -->
+<script>
+  fetch('menu.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('menu').innerHTML = html;
+    })
+    .catch(error => console.error('Error al cargar el menú:', error));
+</script>
+   
+<!-- FIN Menú + Fetch -->
 <h1><strong>NOSOTROS EN SISTEMAGUA</strong></h1>
 <p><strong>Sistemagua es su tienda online  donde puede encontrar todos los productos relacionados con el agua de su hogar  en España.</strong></p>
 <ul>
