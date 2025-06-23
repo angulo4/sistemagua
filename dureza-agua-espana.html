@@ -14,16 +14,19 @@
       <img src="images/sistemagua-610x220.jpg" alt="Logo SistemAgua" class="logo">
     </a>
 </div> 
-<!-- Menú centrado -->
-  <nav class="menu-container">
-    <a href="#">TIENDA</a>
-    <a href="nosotros-sistemagua.html">NOSOTROS SISTEMAGUA</a>
-    <a href="dureza-agua-espana.html">DUREZA DEL AGUA EN ESPAÑA</a>
-    <a href="filtro-anticloro-para-grifo-ducho.html">FILTRO ANTICLORO</a>
-    <a href="filtro-agua-grifo-mexico.html">FILTRO AGUA MEXICO</a>
-    <a href="calidad-agua-mexico.html">CALIDAD AGUA MEXICO</a>
-  </nav>   
-     
+<!-- Menú JavaScrpt fetch -->
+<div id="menu"></div>
+<!-- fetch -->
+<script>
+  fetch('menu.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('menu').innerHTML = html;
+    })
+    .catch(error => console.error('Error al cargar el menú:', error));
+</script>
+   
+<!-- FIN Menú + Fetch -->
 <h1><strong>Dureza del agua en España</strong></h1>
 <p><strong>La Dureza del agua</strong>&nbsp;es&nbsp;la concentración de  compuestos minerales que hay en una determinada cantidad de agua, en referencia  a las sales de magnesio y el calcio que lleva.&nbsp;Son éstas las  causantes de la dureza del agua, y el grado de dureza es directamente  proporcional a la concentración de sales alcalinas. <br />
   La&nbsp;<strong>Dureza total</strong>&nbsp;(<strong>TH</strong>, de total hardness en inglés) se  mide en&nbsp;<strong>grados  franceses</strong>, siendo 1 ºF= 10mg/l de carbonato cálcico ó 0,2 meq/l. <br />
