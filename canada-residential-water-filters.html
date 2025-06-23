@@ -1,1 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Canada Residential Water Filters | SistemAgua</title>
+  <meta name="description" content="Discover high-quality water filters for Canadian homes. Clean, safe, and great-tasting water from SistemAgua." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
 
+  <!-- Logo -->
+  <div class="logo-container">
+    <a href="index.html">
+      <img src="images/sistemagua-610x220.jpg" alt="SistemAgua Logo" class="logo" />
+    </a>
+  </div>
+
+  <!-- Menú cargado dinámicamente -->
+  <div id="menu"></div>
+  <script>
+    fetch('menu.html')
+      .then(response => response.text())
+      .then(html => {
+        document.getElementById('menu').innerHTML = html;
+      })
+      .catch(error => console.error('Error loading menu:', error));
+  </script>
+
+  <!-- Contenido principal -->
+  <main class="content-container">
+    <h1>Canada Residential Water Filters</h1>
+
+    <p>Enjoy pure, great-tasting water in your Canadian home. At <strong>SistemAgua</strong>, we specialize in high-quality residential water filtration systems designed to meet the unique needs of Canadian households. Whether you're in a city apartment or a rural home with well water, we help protect your health and appliances from impurities, chlorine, and hard water.</p>
+
+    <h2>Why Choose Water Filters in Canada?</h2>
+    <p>Canada is known for its vast freshwater resources, but municipal and well water can still contain:</p>
+    <ul>
+      <li>Chlorine and chemical residues</li>
+      <li>Heavy metals and microplastics</li>
+      <li>Hardness (calcium and magnesium)</li>
+      <li>Bacteria or sediment in rural or older systems</li>
+    </ul>
+
+    <h2>Residential Solutions We Offer</h2>
+    <ul>
+      <li><strong>Under-Sink Filters</strong> – Ideal for kitchens, removing chlorine and bad taste.</li>
+      <li><strong>Whole House Systems</strong> – Filter every tap in your home from a single point.</li>
+      <li><strong>Shower Filters</strong> – Remove chlorine to protect your skin and hair.</li>
+      <li><strong>Water Softeners</strong> – Perfect for hard water zones in provinces like Alberta or Saskatchewan.</li>
+    </ul>
+
+    <h2>Benefits of Using SistemAgua Filters in Canada</h2>
+    <ul>
+      <li>Improved water taste and odor</li>
+      <li>Protection against scale and corrosion</li>
+      <li>Healthier skin and hair</li>
+      <li>Increased lifespan of appliances</li>
+      <li>Easy installation and maintenance</li>
+    </ul>
+
+    <h2>Sustainable Water Filtration</h2>
+    <p>Our filters reduce the need for bottled water, helping Canadian families save money and reduce plastic waste. All our systems are built with eco-friendly materials and long-lasting cartridges.</p>
+
+    <h2>Fast Shipping Across Canada</h2>
+    <p>We deliver to all provinces: Ontario, British Columbia, Alberta, Quebec, and more. Orders typically arrive within 3–7 business days.</p>
+
+    <h2>Ready for Cleaner Water?</h2>
+    <p>Explore our range of residential water filters and find the best solution for your home.</p>
+    <p><a href="tienda.html" class="button">Visit Our Shop</a> or <a href="contacto.html" class="button">Contact Us</a> for personalized recommendations.</p>
+  </main>
+
+</body>
+</html>
