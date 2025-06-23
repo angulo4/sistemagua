@@ -16,17 +16,19 @@
     </a>
   </div>
 
-  <!-- Menú cargado dinámicamente -->
-  <div id="menu"></div>
-  <script>
-    fetch('menu.html')
-      .then(response => response.text())
-      .then(html => {
-        document.getElementById('menu').innerHTML = html;
-      })
-      .catch(error => console.error('Error loading menu:', error));
-  </script>
-
+<!-- Menú JavaScrpt fetch -->
+<div id="menu"></div>
+<!-- fetch -->
+<script>
+  fetch('menu.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('menu').innerHTML = html;
+    })
+    .catch(error => console.error('Error al cargar el menú:', error));
+</script>
+   
+<!-- FIN Menú + Fetch -->
   <!-- Contenido principal -->
   <main class="content-container">
     <h1>Canada Residential Water Filters</h1>
