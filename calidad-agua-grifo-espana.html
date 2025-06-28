@@ -129,6 +129,25 @@ target="_blank"><img class="statcounter"
 src="http://c.statcounter.com/6697028/0/7e3aecb8/0/"
 alt="shopify analytics tool"></a></div></noscript>
 <!-- End of StatCounter Code for Dreamweaver -->
+     
+<!-- SCRIPT MAPA INTERACTIVO -->
+<script>
+  const tooltip = document.getElementById('tooltip');
+  document.querySelectorAll('.region').forEach(region => {
+    region.addEventListener('mouseover', () => {
+      tooltip.innerHTML = `<strong>${region.dataset.name}</strong><br>${region.dataset.calidad}`;
+      tooltip.style.opacity = 1;
+    });
+    region.addEventListener('mousemove', e => {
+      tooltip.style.top = (e.clientY + 15) + 'px';
+      tooltip.style.left = (e.clientX + 15) + 'px';
+    });
+    region.addEventListener('mouseout', () => {
+      tooltip.style.opacity = 0;
+    });
+  });
+</script>
+     
 </body>
 </html>
 
