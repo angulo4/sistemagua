@@ -67,18 +67,7 @@
     </ul>
     <p>Estas opciones pueden ayudar a mejorar el sabor o reducir la dureza del agua, especialmente en zonas donde la mineralización es alta.</p>
 <!-- MAPA AQUI -->
-<p>Pasa el ratón por encima del mapa para ver cada comunidad. En el futuro, puedes enlazar cada zona a una página específica.</p>
 
-  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 900" width="100%" height="auto">
-    <!-- Simplificado para mostrar interactividad -->
-    <a href="andalucia.html" title="Andalucía"><path d="M250,700 L300,700 L320,750 L270,750 Z" /></a>
-    <a href="madrid.html" title="Madrid"><path d="M450,450 L480,460 L470,490 L440,480 Z" /></a>
-    <a href="cataluna.html" title="Cataluña"><path d="M700,400 L740,420 L730,460 L690,440 Z" /></a>
-    <a href="galicia.html" title="Galicia"><path d="M100,300 L140,320 L130,360 L90,340 Z" /></a>
-    <a href="valencia.html" title="Comunidad Valenciana"><path d="M650,500 L690,520 L680,560 L640,540 Z" /></a>
-    <!-- Puedes añadir más comunidades con <a><path></path></a> -->
-  </svg>
- 
    
 <!-- FIN MAPA-->
     
@@ -117,32 +106,6 @@ target="_blank"><img class="statcounter"
 src="http://c.statcounter.com/6697028/0/7e3aecb8/0/"
 alt="shopify analytics tool"></a></div></noscript>
 <!-- End of StatCounter Code for Dreamweaver -->
-     
-<!-- JAVASCRIPT MAPA INTERACTIVO -->
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const tooltip = document.getElementById('tooltip');
-    const regions = document.querySelectorAll('.region');
-
-    regions.forEach(region => {
-      region.addEventListener('mouseover', () => {
-        tooltip.innerHTML = `<strong>${region.dataset.name}</strong><br>${region.dataset.calidad}`;
-        tooltip.style.opacity = 1;
-      });
-
-      region.addEventListener('mousemove', e => {
-        tooltip.style.top = (e.clientY + 15) + 'px';
-        tooltip.style.left = (e.clientX + 15) + 'px';
-      });
-
-      region.addEventListener('mouseout', () => {
-        tooltip.style.opacity = 0;
-      });
-    });
-  });
-</script>
-
-
      
 </body>
 </html>
