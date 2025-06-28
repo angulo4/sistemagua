@@ -132,21 +132,28 @@ alt="shopify analytics tool"></a></div></noscript>
      
 <!-- SCRIPT MAPA INTERACTIVO -->
 <script>
-  const tooltip = document.getElementById('tooltip');
-  document.querySelectorAll('.region').forEach(region => {
-    region.addEventListener('mouseover', () => {
-      tooltip.innerHTML = `<strong>${region.dataset.name}</strong><br>${region.dataset.calidad}`;
-      tooltip.style.opacity = 1;
-    });
-    region.addEventListener('mousemove', e => {
-      tooltip.style.top = (e.clientY + 15) + 'px';
-      tooltip.style.left = (e.clientX + 15) + 'px';
-    });
-    region.addEventListener('mouseout', () => {
-      tooltip.style.opacity = 0;
+  document.addEventListener("DOMContentLoaded", () => {
+    const tooltip = document.getElementById('tooltip');
+    const regions = document.querySelectorAll('.region');
+
+    regions.forEach(region => {
+      region.addEventListener('mouseover', () => {
+        tooltip.innerHTML = `<strong>${region.dataset.name}</strong><br>${region.dataset.calidad}`;
+        tooltip.style.opacity = 1;
+      });
+
+      region.addEventListener('mousemove', e => {
+        tooltip.style.top = (e.clientY + 15) + 'px';
+        tooltip.style.left = (e.clientX + 15) + 'px';
+      });
+
+      region.addEventListener('mouseout', () => {
+        tooltip.style.opacity = 0;
+      });
     });
   });
 </script>
+
      
 </body>
 </html>
