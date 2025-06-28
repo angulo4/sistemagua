@@ -67,30 +67,19 @@
     </ul>
     <p>Estas opciones pueden ayudar a mejorar el sabor o reducir la dureza del agua, especialmente en zonas donde la mineralización es alta.</p>
 <!-- MAPA AQUI -->
-<div class="map-container">
-  <div class="tooltip" id="tooltip"></div>
+<p>Pasa el ratón por encima del mapa para ver cada comunidad. En el futuro, puedes enlazar cada zona a una página específica.</p>
 
-  <!-- Aquí debes reemplazar este SVG con el mapa completo de España -->
-  <svg viewBox="0 0 923 658" xmlns="http://www.w3.org/2000/svg">
-    <!-- Algunos ejemplos de regiones (reemplaza con los paths reales del SVG completo) -->
-    <path id="ESMD" class="region" fill="#4CAF50"
-      data-name="Comunidad de Madrid"
-      data-calidad="Buena: agua de baja mineralización y sabor suave."
-      d="M421,295 L435,305 L445,290 Z"/>
-    <path id="ESCT" class="region" fill="#FFC107"
-      data-name="Cataluña"
-      data-calidad="Aceptable: agua dura, sabor a veces fuerte."
-      d="M550,260 L570,275 L585,260 Z"/>
-    <path id="ESAN" class="region" fill="#FF5722"
-      data-name="Andalucía"
-      data-calidad="Mejorable: alta dureza y cloro perceptible."
-      d="M420,450 L440,470 L455,455 Z"/>
-    <path id="ESGA" class="region" fill="#4CAF50"
-      data-name="Galicia"
-      data-calidad="Buena: agua blanda y de excelente sabor."
-      d="M150,300 L170,315 L185,298 Z"/>
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 900" width="100%" height="auto">
+    <!-- Simplificado para mostrar interactividad -->
+    <a href="andalucia.html" title="Andalucía"><path d="M250,700 L300,700 L320,750 L270,750 Z" /></a>
+    <a href="madrid.html" title="Madrid"><path d="M450,450 L480,460 L470,490 L440,480 Z" /></a>
+    <a href="cataluna.html" title="Cataluña"><path d="M700,400 L740,420 L730,460 L690,440 Z" /></a>
+    <a href="galicia.html" title="Galicia"><path d="M100,300 L140,320 L130,360 L90,340 Z" /></a>
+    <a href="valencia.html" title="Comunidad Valenciana"><path d="M650,500 L690,520 L680,560 L640,540 Z" /></a>
+    <!-- Puedes añadir más comunidades con <a><path></path></a> -->
   </svg>
-</div>
+    <p>Este mapa es interactivo. Puedes enlazar cada comunidad a su propia página de análisis, ideal para monetizar con AdSense con contenido geolocalizado.</p>
+ 
    
 <!-- FIN MAPA-->
     
@@ -131,28 +120,7 @@ alt="shopify analytics tool"></a></div></noscript>
 <!-- End of StatCounter Code for Dreamweaver -->
      
 <!-- SCRIPT MAPA INTERACTIVO -->
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const tooltip = document.getElementById('tooltip');
-    const regions = document.querySelectorAll('.region');
 
-    regions.forEach(region => {
-      region.addEventListener('mouseover', () => {
-        tooltip.innerHTML = `<strong>${region.dataset.name}</strong><br>${region.dataset.calidad}`;
-        tooltip.style.opacity = 1;
-      });
-
-      region.addEventListener('mousemove', e => {
-        tooltip.style.top = (e.clientY + 15) + 'px';
-        tooltip.style.left = (e.clientX + 15) + 'px';
-      });
-
-      region.addEventListener('mouseout', () => {
-        tooltip.style.opacity = 0;
-      });
-    });
-  });
-</script>
 
      
 </body>
