@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5518429889059364"
+     crossorigin="anonymous">
+</script>  
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="estilos.css">
+<title>Calidad del agua del grifo en España</title>
+</head>
+
+<body>
+<!-- LOGO FLOTA CENTRADO -->
+<div class="logo-container">
+    <a href="index.html">
+      <img src="images/sistemagua-610x220.jpg" alt="Logo SistemAgua" class="logo">
+    </a>
+</div> 
+<!-- Menú JavaScrpt fetch -->
+<div id="menu"></div>
+<!-- fetch -->
+<script>
+  fetch('menu.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('menu').innerHTML = html;
+    })
+    .catch(error => console.error('Error al cargar el menú:', error));
+</script>
+   
+<!-- FIN Menú + Fetch -->
+<body>
+
+<main>
+  <article>
+    <h1>¿Es segura el agua del grifo en España? Calidad por regiones</h1>
+
+    <p>Cada día, millones de personas en España abren el grifo sin pensar demasiado en la calidad del agua que consumen. Sin embargo, la composición del agua potable varía significativamente entre regiones, no solo por su dureza o mineralización, sino también por el tratamiento que recibe y su origen. En este artículo analizamos la calidad del agua del grifo en distintas zonas del país y si realmente es segura para beber.</p>
+
+    <h2>¿Se puede beber el agua del grifo en España?</h2>
+    <p>La respuesta corta es <strong>sí</strong>, en casi toda España el agua del grifo es potable y segura según los estándares sanitarios europeos. Las empresas suministradoras deben cumplir estrictas normativas de calidad que garantizan la eliminación de contaminantes microbiológicos y químicos.</p>
+    <p>No obstante, la percepción sobre su calidad cambia según la región. Algunas zonas tienen un agua más dura o con sabores que resultan desagradables, especialmente en zonas costeras o del sur del país. Esto ha llevado a muchas personas a preferir el agua embotellada o instalar sistemas de filtrado domésticos.</p>
+
+    <h2>Diferencias regionales en la calidad del agua</h2>
+    <p>La calidad del agua depende en gran parte de su origen (río, embalse o acuífero), así como de los tratamientos a los que se somete. Aquí te mostramos un resumen por comunidades:</p>
+    <ul>
+      <li><strong>Madrid:</strong> El agua proviene en su mayoría del sistema del Canal de Isabel II, con embalses en la sierra. Es considerada una de las mejores del país, con un sabor suave y baja mineralización.</li>
+      <li><strong>Cataluña:</strong> Barcelona, por ejemplo, depende de fuentes diversas, y el agua tiende a ser más dura. Aunque es potable, muchas personas la consideran poco agradable al gusto.</li>
+      <li><strong>Andalucía:</strong> El agua suele ser más dura y con mayor contenido de cloro. En provincias como Almería o Cádiz es común el uso de descalcificadores.</li>
+      <li><strong>Islas Baleares y Canarias:</strong> En algunas zonas se usa agua desalinizada, lo que puede afectar su sabor y conductividad. Aunque es potable, algunos usuarios reportan olores o sabores metálicos.</li>
+      <li><strong>Galicia y Asturias:</strong> Con abundancia de lluvias y aguas superficiales, el agua del grifo es generalmente blanda y de buen sabor.</li>
+    </ul>
+
+    <h2>¿Por qué sabe mal el agua del grifo?</h2>
+    <p>El sabor del agua puede verse afectado por varios factores, como el nivel de cloro, la dureza, la presencia de minerales como el calcio o magnesio, o incluso el estado de las tuberías del edificio. Aunque estos elementos no representan un riesgo para la salud, sí pueden generar rechazo por parte del consumidor.</p>
+
+    <h2>¿Es mejor el agua embotellada?</h2>
+    <p>Desde el punto de vista sanitario, no necesariamente. El agua del grifo en España suele pasar controles más frecuentes que el agua embotellada. Sin embargo, la elección muchas veces se basa en el sabor, comodidad o preferencias personales.</p>
+
+    <h2>Opciones para mejorar el agua del grifo</h2>
+    <p>Si bien es potable, hay quienes optan por mejorar su calidad usando:</p>
+    <ul>
+      <li>Filtros de carbón activado (jarra o grifo)</li>
+      <li>Osmosis inversa</li>
+      <li>Descalcificadores</li>
+      <li>Hervido para eliminar sabores</li>
+    </ul>
+    <p>Estas opciones pueden ayudar a mejorar el sabor o reducir la dureza del agua, especialmente en zonas donde la mineralización es alta.</p>
+<!-- MAPA AQUI -->
+
+<div class="map-container">
+  <div class="tooltip" id="tooltip"></div>
+  <svg viewBox="0 0 1000 900">
+    <!-- Solo incluimos algunas regiones como ejemplo. Se pueden agregar todas -->
+    <path id="madrid" class="region" fill="#4CAF50" d="M400,400 L420,410 L430,400 Z" data-name="Madrid" data-calidad="Buena: Agua de baja mineralización, sabor excelente."/>
+    <path id="catalunya" class="region" fill="#FFC107" d="M500,350 L520,360 L530,340 Z" data-name="Cataluña" data-calidad="Aceptable: Agua dura, sabor mejorable en algunas zonas."/>
+    <path id="andalucia" class="region" fill="#FF5722" d="M400,500 L420,510 L440,490 Z" data-name="Andalucía" data-calidad="Mejorable: Alta dureza y presencia de cloro en varias provincias."/>
+    <path id="galicia" class="region" fill="#4CAF50" d="M200,300 L220,310 L230,290 Z" data-name="Galicia" data-calidad="Buena: Agua abundante, blanda y de buen sabor."/>
+    <!-- Puedes seguir añadiendo más regiones aquí -->
+  </svg>
+</div>
+
+<script>
+  const tooltip = document.getElementById('tooltip');
+  const regions = document.querySelectorAll('.region');
+
+  regions.forEach(region => {
+    region.addEventListener('mouseover', e => {
+      tooltip.innerHTML = `<strong>${region.dataset.name}</strong><br>${region.dataset.calidad}`;
+      tooltip.style.opacity = 1;
+    });
+    region.addEventListener('mousemove', e => {
+      tooltip.style.top = (e.pageY + 10) + 'px';
+      tooltip.style.left = (e.pageX + 10) + 'px';
+    });
+    region.addEventListener('mouseout', () => {
+      tooltip.style.opacity = 0;
+    });
+  });
+</script>
+
+    
+<!-- FIN MAPA-->
+    
+    <h2>Conclusión</h2>
+    <p>El agua del grifo en España es segura en la gran mayoría del territorio, aunque su calidad percibida varía mucho entre regiones. Entender su origen y características puede ayudarte a tomar decisiones más informadas sobre su consumo o tratamiento. Y si estás en una zona con agua de buena calidad, ¡aprovéchala! Es una opción económica, sostenible y saludable.</p>
+  </article>
+</main>
+<footer class="page-footer dark">
+<div class="footer-copyright">
+<p>© 2025 Copyright SISTEMAGUA</p>
+</div>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-15468005-7', 'auto');
+  ga('send', 'pageview');
+
+</script>
+<!-- Start of StatCounter Code for Dreamweaver -->
+<script type="text/javascript">
+var sc_project=6697028; 
+var sc_invisible=0; 
+var sc_security="7e3aecb8"; 
+var scJsHost = (("https:" == document.location.protocol) ?
+"https://secure." : "http://www.");
+document.write("<sc"+"ript type='text/javascript' src='" +
+scJsHost+
+"statcounter.com/counter/counter.js'></"+"script>");
+</script>
+<noscript><div class="statcounter"><a title="shopify
+analytics tool" href="http://statcounter.com/shopify/"
+target="_blank"><img class="statcounter"
+src="http://c.statcounter.com/6697028/0/7e3aecb8/0/"
+alt="shopify analytics tool"></a></div></noscript>
+<!-- End of StatCounter Code for Dreamweaver -->
+</body>
+</html>
+
+  
