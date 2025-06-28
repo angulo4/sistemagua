@@ -67,39 +67,31 @@
     </ul>
     <p>Estas opciones pueden ayudar a mejorar el sabor o reducir la dureza del agua, especialmente en zonas donde la mineralización es alta.</p>
 <!-- MAPA AQUI -->
-
 <div class="map-container">
   <div class="tooltip" id="tooltip"></div>
-  <svg viewBox="0 0 1000 900">
-    <!-- Solo incluimos algunas regiones como ejemplo. Se pueden agregar todas -->
-    <path id="madrid" class="region" fill="#4CAF50" d="M400,400 L420,410 L430,400 Z" data-name="Madrid" data-calidad="Buena: Agua de baja mineralización, sabor excelente."/>
-    <path id="catalunya" class="region" fill="#FFC107" d="M500,350 L520,360 L530,340 Z" data-name="Cataluña" data-calidad="Aceptable: Agua dura, sabor mejorable en algunas zonas."/>
-    <path id="andalucia" class="region" fill="#FF5722" d="M400,500 L420,510 L440,490 Z" data-name="Andalucía" data-calidad="Mejorable: Alta dureza y presencia de cloro en varias provincias."/>
-    <path id="galicia" class="region" fill="#4CAF50" d="M200,300 L220,310 L230,290 Z" data-name="Galicia" data-calidad="Buena: Agua abundante, blanda y de buen sabor."/>
-    <!-- Puedes seguir añadiendo más regiones aquí -->
+
+  <!-- Aquí debes reemplazar este SVG con el mapa completo de España -->
+  <svg viewBox="0 0 923 658" xmlns="http://www.w3.org/2000/svg">
+    <!-- Algunos ejemplos de regiones (reemplaza con los paths reales del SVG completo) -->
+    <path id="ESMD" class="region" fill="#4CAF50"
+      data-name="Comunidad de Madrid"
+      data-calidad="Buena: agua de baja mineralización y sabor suave."
+      d="M421,295 L435,305 L445,290 Z"/>
+    <path id="ESCT" class="region" fill="#FFC107"
+      data-name="Cataluña"
+      data-calidad="Aceptable: agua dura, sabor a veces fuerte."
+      d="M550,260 L570,275 L585,260 Z"/>
+    <path id="ESAN" class="region" fill="#FF5722"
+      data-name="Andalucía"
+      data-calidad="Mejorable: alta dureza y cloro perceptible."
+      d="M420,450 L440,470 L455,455 Z"/>
+    <path id="ESGA" class="region" fill="#4CAF50"
+      data-name="Galicia"
+      data-calidad="Buena: agua blanda y de excelente sabor."
+      d="M150,300 L170,315 L185,298 Z"/>
   </svg>
 </div>
-
-<script>
-  const tooltip = document.getElementById('tooltip');
-  const regions = document.querySelectorAll('.region');
-
-  regions.forEach(region => {
-    region.addEventListener('mouseover', e => {
-      tooltip.innerHTML = `<strong>${region.dataset.name}</strong><br>${region.dataset.calidad}`;
-      tooltip.style.opacity = 1;
-    });
-    region.addEventListener('mousemove', e => {
-      tooltip.style.top = (e.pageY + 10) + 'px';
-      tooltip.style.left = (e.pageX + 10) + 'px';
-    });
-    region.addEventListener('mouseout', () => {
-      tooltip.style.opacity = 0;
-    });
-  });
-</script>
-
-    
+   
 <!-- FIN MAPA-->
     
     <h2>Conclusión</h2>
