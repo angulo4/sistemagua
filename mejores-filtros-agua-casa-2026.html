@@ -443,4 +443,21 @@ src="http://c.statcounter.com/6697028/0/7e3aecb8/0/"
 alt="shopify analytics tool"></a></div></noscript>
 <!-- End of StatCounter Code for Dreamweaver -->
 </body>
+ <!-- FOOTER -->     
+<div id="footer"></div>
+
+<script>
+  fetch('footer.html')
+    .then(response => response.text())
+    .then(html => {
+      document.getElementById('footer').innerHTML = html;
+
+      // Después de insertar el HTML, ahora sí insertamos el año
+      const yearSpan = document.getElementById('year');
+      if (yearSpan) {
+        yearSpan.textContent = new Date().getFullYear();
+      }
+    })
+    .catch(error => console.error('Error loading footer:', error));
+</script>     
 </html>
